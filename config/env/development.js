@@ -13,12 +13,5 @@ module.exports = {
 		prefix: 'ni.' + hostname + '.nac',
 		interval: 10000,
 		verbose: true
-	},
-	assets: {
-		html: ['public/modules/**/*.html'],
-		tests: [
-			'public/lib/angular-mocks/angular-mocks.js',
-			'public/modules/*/tests/*.js'
-		]
 	}
 };

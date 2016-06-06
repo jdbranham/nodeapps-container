@@ -50,6 +50,11 @@ module.exports = {
 			'public/application.js',
 			'public/modules/*/*.js',
 			'public/modules/*/*[!tests]*/*.js'
+		],
+		html: ['public/modules/**/*.html'],
+		tests: [
+			'public/lib/angular-mocks/angular-mocks.js',
+			'public/modules/*/tests/*.js'
 		]
 	},
 	monitor:{
