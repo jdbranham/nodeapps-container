@@ -21,30 +21,36 @@ module.exports = {
 	                        '.mp3',
 	                        '.mp4'],
     assets: {
-		lib: {
+    	lib: {
 			css: [
-				'public/lib/bootswatch-dist/css/bootstrap.min.css'
-				//'public/lib/bootstrap/dist/css/bootstrap-theme.min.css',
+				'public/lib/bootswatch-dist/css/bootstrap.css'
 			],
 			js: [
-				'public/lib/angular/angular.min.js',
+				'public/lib/angular/angular.js',
 				'public/lib/angular-resource/angular-resource.js',
 				'public/lib/angular-cookies/angular-cookies.js',
 				'public/lib/angular-animate/angular-animate.js',
 				'public/lib/angular-touch/angular-touch.js',
 				'public/lib/angular-sanitize/angular-sanitize.js',
-				'public/lib/angular-ui-router/release/angular-ui-router.min.js',
-				'public/lib/angular-ui-utils/ui-utils.min.js',
-				'public/lib/angular-bootstrap/ui-bootstrap-tpls.min.js',
+				'public/lib/angular-ui-router/release/angular-ui-router.js',
+				'public/lib/angular-ui-utils/ui-utils.js',
+				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
 				'public/lib/string/dist/string.js',
-				'public/lib/jquery/jquery.min.js',
-				'public/lib/bootswatch-dist/js/bootstrap.min.js',
+				'public/lib/jquery/jquery.js',
+				'public/lib/bootswatch-dist/js/bootstrap.js',
 				'public/lib/bootbox/bootbox.js',
 				'public/lib/moment/moment.js'
 			]
 		},
-		css: 'public/dist/application.min.css',
-		js: 'public/dist/application.min.js'
+		css: [
+			'public/modules/**/css/*.css'
+		],
+		js: [
+			'public/config.js',
+			'public/application.js',
+			'public/modules/*/*.js',
+			'public/modules/*/*[!tests]*/*.js'
+		]
 	},
 	monitor:{
 		carbonHost: process.env.CARBON_HOST || '127.0.0.1',
